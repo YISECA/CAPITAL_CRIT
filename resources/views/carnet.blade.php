@@ -17,25 +17,27 @@ img{
 
  <img src="https://www.idrd.gov.co/sitio/idrd/sites/default/files/Cabezote%20limpio.jpg">
 
-      <p style="font-family: times, serif; font-size:15pt; font-style:italic" align="center">{{$formulario->primer_nombre}}&nbsp;{{$formulario->segundo_nombre}}&nbsp;{{$formulario->primer_apellido}}&nbsp;{{$formulario->segundo_apellido}} </p>
-      <p align="center"><strong>BIENVENIDO, YA HACES PARTE DE LA ECOTRAVESÍA CERROS ORIENTALES 2017</strong></p><br>
+      <p style="font-family: times, serif; font-size:15pt; font-style:italic" align="center">{{$formulario->nombres}}&nbsp;{{$formulario->apellidos}} </p>
+      <p align="center"><strong>BIENVENIDO, YA HACES PARTE DE CAPITAL CRIT “LA CORONA DE LA CALLE”  en el Festival de Verano 2017</strong></p><br>
       <p align="justify">Este documento será tu comprobante de inscripción, el cual deberás entregar impreso o descargarlo en tu celular para verificar los datos el día del evento.</p>
-      Domingo  06 de Agosto de 2017
-      <p>Hora: 06:00 am</p>
-      <p>Lugar: Parque Nacional</p>
+      Domingo  13 de Agosto de 2017
+      <p>Hora: 07:00 am</p>
+      <p>Lugar: Parque Recreodeportivo El Salitre</p>
 
       <p align="center"><strong >DETALLES DE TU INSCRIPCIÓN</strong></p>
   
-     <strong>Nombre  Completo:</strong> {{$formulario->primer_nombre}}&nbsp;{{$formulario->segundo_nombre}}&nbsp;{{$formulario->primer_apellido}}&nbsp;{{$formulario->segundo_apellido}}
+     <strong>Nombre  Completo:</strong> {{$formulario->nombres}}&nbsp;{{$formulario->apellidos}}
      <br>      
      <strong>Documento:</strong> {{$formulario->cedula}}
      <br>
-     <strong>Fecha  de Registro:</strong> {{$formulario->created_at}}
-     <br>  
-     <strong>Número  de Inscripción:</strong> <font size="4" color="#00ade6">{{$formulario->id}}</font>
+     <strong>Modalidad:</strong> {{$formulario->modalidad}}
+     <br>
+     <strong>Categoría:</strong> {{$formulario->categoria}}
+     <br>    
+     <strong>Número de formulario:</strong> <font size="4" color="#00ade6">{{$formulario->id}}</font>
      <br><br>
       <p align="center" style="font-size: 12pt"><br>
-        Cualquier inquietud acércate a las Instalaciones del IDRD Calle 63 No 59a-06 Área de Recreación, o llama al teléfono 6605400 Ext. 2007 y 3002.
+        Para mayor información de la Capital Crit “LA CORONA DE LA CALLE”, acercarse a las Instalaciones de FIX AND BIKE: Carrera 17 # 134ª 62 B/ Cedritos, o llamar al celular 317 796 7330.
       </p>
  
   

@@ -27,6 +27,8 @@ Route::get('cerrar', function () {
     return redirect('/');
 });
 
+Route::post('/registro/registro/', 'FormController@procesar');
+
 
 Route::any('logear','FormController@logear');
 Route::any('ultimo_codigo','FormController@last_codigo');

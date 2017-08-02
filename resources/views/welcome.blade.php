@@ -176,7 +176,7 @@
                   <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">Cada participante deberá contar con cédula original y carné vigente del sistema de salud para el ingreso a la pista en las rondas clasificatorias y finales.</li><br>
                   <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">Se dispondrán puntos de hidratación para los participantes.</li><br>
                   <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">La carrera contará con la participación de las categorías élites, pero tendrán una premiación con un reconocimiento a parte de las demás categorías.</li><br>
-                  <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">• Para mayor información de la Capital Crit “LA CORONA DE LA CALLE”, acercarse a las Instalaciones de FIX AND BIKE: Carrera 17 # 134ª 62 B/ Cedritos, o llamar al celular 317 796 7330.</li><br>
+                  <li style="color: #FBEFEF; font-size: 16px; font-family: calibri">Para mayor información de la Capital Crit “LA CORONA DE LA CALLE”, acercarse a las Instalaciones de FIX AND BIKE: Carrera 17 # 134ª 62 B/ Cedritos, o llamar al celular 317 796 7330.</li><br>
                </font>
                <h3 style="font-family:cursive; color: #58D3F7;font-size: 25px" >Políticas del Evento</h3>
                <ul class="ul_inicio">

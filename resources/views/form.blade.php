@@ -2,6 +2,8 @@
 
 @extends('master')                              
 @section('content') 
+
+<div class="content" id="registro" class="row" data-url="registro"></div>
 <style type="text/css">
    table, td, tr {
    background-color: rgba(0, 0, 255, 0) !important;

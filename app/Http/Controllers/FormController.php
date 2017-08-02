@@ -11,6 +11,7 @@ use Session;
 use App\Form;
 use Idrd\Usuarios\Repo\Acceso;
 use App\Modalidad;
+use App\Cupos;
 use Mail;
 
 class FormController extends BaseController
@@ -136,14 +137,14 @@ class FormController extends BaseController
         
         Mail::send('email', ['user' => $request->input('mail'),'formulario' => $formulario], function ($m) use ($request) 
         {
-            $m->from('no-reply@idrd.gov.co', 'Registro Exitoso a la Ecotravesía Cerros Orientales');
-            $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Registro Exitoso a la Ecotravesía cerros orientales!');
+            $m->from('no-reply@idrd.gov.co', 'Registro Exitoso a CAPITAL CRIT “LA CORONA DE LA CALLE” - Festival de Verano 2017 ');
+            $m->to($request->input('mail'), $request->input('primer_nombre'))->subject('Registro Exitoso a CAPITAL CRIT “LA CORONA DE LA CALLE” - Festival de Verano 2017');
         });
 
       }else{
-        return view('error', ['error' => 'Lo sentimos el limite de inscritos fue superado!']);
+        return view('error', ['error' => 'Lo sentimos el limite de inscritos fue superado']);
       }
-        return view('error', ['error' =>'  BIENVENIDO, YA HACES PARTE DE LA ECOTRAVESÍA CERROS ORIENTALES 2017, verifica los datos registrados en tu correo electrónico o descarga tu comprobante de inscripción en el menú "Descargar inscripción" que se encuentra en la parte superior.']);
+        return view('error', ['error' =>'BIENVENIDO, YA HACES PARTE DE CAPITAL CRIT “LA CORONA DE LA CALLE”  en el Festival de Verano 2017, verifica los datos registrados en tu correo electrónico o descarga tu comprobante de inscripción en el menú "Descargar inscripción" que se encuentra en la parte superior.']);
     }
 
  // conteo de la tabla
@@ -172,6 +173,23 @@ class FormController extends BaseController
         $formulario['telefono_contacto'] = $input['telefono_contacto'];
         $formulario->save();
         return $formulario;        
+    }
+
+
+    public function procesar(Request $request)
+    {
+
+      $id_modalidad = $request['id_modalidad'];
+      $id_categoria = $request['id_categoria'];
+     
+
+      $cupo = Cupos::where(['id_modalidad' => $id_modalidad , 'id_categoria' => $id_categoria])->first();
+
+      $actual = Form::where(['modalidad' => $id_modalidad , 'categoria' => $id_categoria])->count();
+
+      return $cupo['cupos']-$actual;
+
+     
     }
 
 }

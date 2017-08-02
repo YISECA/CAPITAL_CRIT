@@ -70,7 +70,7 @@ class PdfController extends BaseController {
 
       $pdf = PDF::loadHTML($view);
 
-      return $pdf->setPaper('a5', 'portrait')->stream('Carnet '.date('l jS \of F Y h:i:s A'));     
+      return $pdf->setPaper('a5', 'portrait')->stream('Inscripción a Capital Crit - Festival de Verano 2017 '.date('- F - 13 - Y'));     
 
     }
 

@@ -6,12 +6,12 @@
   
   <td height="302">
     <center>
-      <p style="font-family: times, serif; font-size:14pt; font-style:italic">{{$formulario->primer_nombre}}&nbsp;{{$formulario->segundo_nombre}}&nbsp;{{$formulario->primer_apellido}}&nbsp;{{$formulario->segundo_apellido}} </p>
-      <p align="center"><strong>BIENVENIDO,   YA HACES PARTE DE LA ECOTRAVESÍA CERROS ORIENTALES 2017</strong></p>
+      <p style="font-family: times, serif; font-size:14pt; font-style:italic">{{$formulario->nombres}}&nbsp;{{$formulario->apellidos}}</p>
+      <p align="center"><strong>BIENVENIDO, YA HACES PARTE DE CAPITAL CRIT “LA CORONA DE LA CALLE”  en el Festival de Verano 2017</strong></p>
       <p>Este correo será tu comprobante de inscripción, el cual deberás entregar  impreso  o descargarlo en tu celular para verificar los datos el día del evento</p>
-Domingo  06 de Agosto de 2017
-<p>Hora: 06:00 am</p>
-<p>Lugar:  Parque Nacional </p>
+Domingo  13 de Agosto de 2017
+<p>Hora: 07:00 am</p>
+<p>Lugar:  Parque Recreodeportivo El Salitre</p>
 
 <table width="558" height="146" border="1"  cellspacing="2" bordercolor="#000000">
         <tr>
@@ -19,15 +19,19 @@ Domingo  06 de Agosto de 2017
         </tr>
       <tr>
         <td width="256"><center>Nombre  Completo:</center> </td>
-        <td width="286">{{$formulario->primer_nombre}}&nbsp;{{$formulario->segundo_nombre}}&nbsp;{{$formulario->primer_apellido}}&nbsp;{{$formulario->segundo_apellido}}</td>
+        <td width="286">{{$formulario->nombres}}&nbsp;{{$formulario->apellidos}}</td>
         </tr>
       <tr>
         <td><center>Documento:</center></td>
         <td>{{$formulario->cedula}}</td>
         </tr>
       <tr>
-        <td height="28"><center>Fecha  de Registro:</center></td>
-        <td>{{$formulario->created_at}}</td>
+        <td height="28"><center>Modalidad:</center></td>
+        <td>{{$formulario->modalidad}}</td>
+        </tr>
+      <tr>
+        <td height="28"><center>Categoría:</center></td>
+        <td>{{$formulario->categoría}}</td>
         </tr>
       <tr>
         <td><center>Número  de Inscripción:</center> </td>
@@ -35,7 +39,7 @@ Domingo  06 de Agosto de 2017
         </tr>
     </table>
       <p><br>
-        Cualquier inquietud acércate a las Instalaciones del IDRD Calle 63 No 59a-06 Área de Recreación, o llama al teléfono 6605400 Ext. 2007 y 3002.
+        Para mayor información de la Capital Crit “LA CORONA DE LA CALLE”, acercarse a las Instalaciones de FIX AND BIKE: Carrera 17 # 134ª 62 B/ Cedritos, o llamar al celular 317 796 7330.
       </p>
       <p>&nbsp;</p>
     </center></td>
