@@ -76,17 +76,11 @@
 
           
 
-    
-
-        
+      @show
 
 
 
-            @show
-
-
-
-      <title>ECOTRAVESÍA CERROS ORIENTALES</title>
+      <title>CAPITAL CRIT</title>
 
   </head>
 

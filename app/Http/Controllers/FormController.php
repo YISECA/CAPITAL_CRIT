@@ -9,11 +9,8 @@ use Redirect;
 use Validator;
 use Session;
 use App\Form;
-use Idrd\Usuarios\Repo\Departamento;
-use Idrd\Usuarios\Repo\Pais;
-use Idrd\Usuarios\Repo\Ciudad;
-use Idrd\Usuarios\Repo\Localidad;
 use Idrd\Usuarios\Repo\Acceso;
+use App\Modalidad;
 use Mail;
 
 class FormController extends BaseController
@@ -21,6 +18,14 @@ class FormController extends BaseController
 
 {
     var $url;
+
+    public function index()
+    {
+
+      $modalidad = Modalidad::all();
+      return view('form',["modalidades"=>$modalidad]);
+    }
+
     private function cifrar($M)
     {   
       $C="";
@@ -155,20 +160,16 @@ class FormController extends BaseController
     {
         $formulario['cedula'] = $input['cedula'];
         $formulario['tipo_documento'] = $input['tipo_documento'];
-        $formulario['primer_nombre'] = $input['primer_nombre'];
-        $formulario['segundo_nombre'] = $input['segundo_nombre'];
-        $formulario['primer_apellido'] = $input['primer_apellido'];
-        $formulario['segundo_apellido'] = $input['segundo_apellido'];
-        $formulario['genero'] = $input['genero'];
+        $formulario['nombres'] = $input['nombres'];
+        $formulario['apellidos'] = $input['apellidos'];
         $formulario['fecha_nacimiento'] = $input['fecha_nacimiento'];
         $formulario['mail'] = $input['mail'];
         $formulario['celular'] = $input['celular'];
         $formulario['eps'] = $input['eps'];
-        $formulario['talla'] = $input['talla'];
-        $formulario['barrio'] = $input['barrio'];
-        $formulario['tipo_sangre'] = $input['tipo_sangre'];
+        $formulario['modalidad'] = $input['modalidad'];
+        $formulario['categoria'] = $input['categoria'];
         $formulario['nombre_contacto'] = $input['nombre_contacto'];
-        $formulario['numero_contacto'] = $input['numero_contacto'];
+        $formulario['telefono_contacto'] = $input['telefono_contacto'];
         $formulario->save();
         return $formulario;        
     }
