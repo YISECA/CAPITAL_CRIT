@@ -27,11 +27,11 @@ Domingo  13 de Agosto de 2017
         </tr>
       <tr>
         <td height="28"><center>Modalidad:</center></td>
-        <td>{{$formulario->modalidad}}</td>
+        <td>{{$formulario->modalidades['modalidad']}}</td>
         </tr>
       <tr>
         <td height="28"><center>Categoría:</center></td>
-        <td>{{$formulario->categoría}}</td>
+        <td>{{$formulario->categorias['categoria']}}</td>
         </tr>
       <tr>
         <td><center>Número  de Inscripción:</center> </td>

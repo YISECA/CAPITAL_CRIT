@@ -9,11 +9,16 @@ class Form extends Model
 
    protected $primaryKey = 'id';
    
-   protected $fillable = ['modalidad'];
+   protected $fillable = ['modalidad','categoria'];
 
   public function modalidades()
    {
        return $this->belongsTo('App\Modalidad','modalidad');
+   }
+
+   public function categorias()
+   {
+       return $this->belongsTo('App\Categoria','categoria');
    }
 }
 

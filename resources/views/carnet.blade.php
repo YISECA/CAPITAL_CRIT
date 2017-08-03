@@ -30,9 +30,9 @@ img{
      <br>      
      <strong>Documento:</strong> {{$formulario->cedula}}
      <br>
-     <strong>Modalidad:</strong> {{$formulario->modalidad}}
+     <strong>Modalidad:</strong> {{$formulario->modalidades['modalidad']}}
      <br>
-     <strong>Categoría:</strong> {{$formulario->categoria}}
+     <strong>Categoría:</strong> {{$formulario->categorias['categoria']}}
      <br>    
      <strong>Número de formulario:</strong> <font size="4" color="#00ade6">{{$formulario->id}}</font>
      <br><br>

@@ -11,6 +11,7 @@ use Session;
 use App\Form;
 use Idrd\Usuarios\Repo\Acceso;
 use App\Modalidad;
+use App\Categoria;
 use App\Cupos;
 use Mail;
 
@@ -54,20 +55,16 @@ class FormController extends BaseController
              <th style="text-transform: capitalize;">Código de Inscripción</th>
              <th style="text-transform: capitalize;">cedula</th>
              <th style="text-transform: capitalize;">tipo_documento</th>
-             <th style="text-transform: capitalize;">primer_nombre</th>
-             <th style="text-transform: capitalize;">segundo_nombre</th>
-             <th style="text-transform: capitalize;">primer_apellido</th>
-             <th style="text-transform: capitalize;">segundo_apellido</th>
-             <th style="text-transform: capitalize;">genero</th>
+             <th style="text-transform: capitalize;">Nombres</th>
+             <th style="text-transform: capitalize;">Apellidos</th>
              <th style="text-transform: capitalize;">fecha_nacimiento</th>
-             <th style="text-transform: capitalize;">mail</th>
-             <th style="text-transform: capitalize;">celular</th>
-             <th style="text-transform: capitalize;">eps</th>
-             <th style="text-transform: capitalize;">Talla</th> 
-             <th style="text-transform: capitalize;">Barrio</th>   
-             <th style="text-transform: capitalize;">Tipo de sangre</th>   
+             <th style="text-transform: capitalize;">Correo Electrónico</th>
+             <th style="text-transform: capitalize;">Celular</th>
+             <th style="text-transform: capitalize;">Eps</th>
+             <th style="text-transform: capitalize;">Modalidad</th> 
+             <th style="text-transform: capitalize;">Categoría</th>   
              <th style="text-transform: capitalize;">Nombre contacto emergencia</th>   
-             <th style="text-transform: capitalize;">número de contacto de emergencia</th>              
+             <th style="text-transform: capitalize;">Teléfono de contacto de emergencia</th>              
             </tr>
         </thead>
         <tbody id="tabla"></strong>';
@@ -78,20 +75,16 @@ class FormController extends BaseController
        $tabla.='<tr style="color: #000000"><td>'.$value->id.'</td>';
        $tabla.='<td>'.$value->cedula.'</td>';
        $tabla.='<td>'.$value->tipo_documento.'</td>';
-       $tabla.='<td>'.$value->primer_nombre.'</td>';
-       $tabla.='<td>'.$value->segundo_nombre.'</td>';
-       $tabla.='<td>'.$value->primer_apellido.'</td>';
-       $tabla.='<td>'.$value->segundo_apellido.'</td>';
-       $tabla.='<td>'.$value->genero.'</td>';
+       $tabla.='<td>'.$value->nombres.'</td>';
+       $tabla.='<td>'.$value->apellidos.'</td>';
        $tabla.='<td>'.$value->fecha_nacimiento.'</td>';
        $tabla.='<td>'.$value->mail.'</td>';
        $tabla.='<td>'.$value->celular.'</td>';
        $tabla.='<td>'.$value->eps.'</td>';
-       $tabla.='<td>'.$value->talla.'</td>';
-       $tabla.='<td>'.$value->barrio.'</td>';
-       $tabla.='<td>'.$value->tipo_sangre.'</td>';
+       $tabla.='<td>'.$value->modalidades['modalidad'].'</td>';
+       $tabla.='<td>'.$value->categorias['categoria'].'</td>';
        $tabla.='<td>'.$value->nombre_contacto.'</td>';
-       $tabla.='<td>'.$value->numero_contacto.'</td></tr>';
+       $tabla.='<td>'.$value->telefono_contacto.'</td></tr>';
 
       }
 
